@@ -4,16 +4,16 @@ using System.Text;
 
 namespace TDDexamples
 {
-    public class GroceryClass
+    public class GroceryLists
     {
         public List<string> StuffToBuy = new List<string>();
 
-        public GroceryClass()
+        public GroceryLists()
         {
 
         }
 
-        public GroceryClass(string name)
+        public GroceryLists(string name)
         {
 
         }

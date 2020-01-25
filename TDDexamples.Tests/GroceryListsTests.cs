@@ -6,12 +6,12 @@ using Xunit;
 
 namespace TDDexamples.Tests
 {
-    public class GroceryClassTests
+    public class GroceryListsTests
     {
         [Fact]
         public void ShouldCreateGroceryObject()
         {
-            var grocery = new GroceryClass("Sav-A-Lot");
+            var grocery = new GroceryLists("Sav-A-Lot");
 
         }
 
@@ -19,7 +19,7 @@ namespace TDDexamples.Tests
         public void ShouldGetOurList_Do_We_Have_a_list()
         {
             // Arrange
-            var sut = new GroceryClass();
+            var sut = new GroceryLists();
 
             // Act
             var myList = sut.ReturnMyList();
@@ -31,7 +31,7 @@ namespace TDDexamples.Tests
         [Fact]
         public void Can_We_Add_To_The_List()
         {
-            var sut = new GroceryClass();
+            var sut = new GroceryLists();
 
             int initialListCount = sut.ReturnMyList().Count;
             sut.AddStuffToList("stuff");

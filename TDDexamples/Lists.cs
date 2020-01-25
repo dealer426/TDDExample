@@ -4,16 +4,16 @@ using System.Text;
 
 namespace TDDexamples
 {
-    public class GroceryLists
+    public class Lists
     {
         public List<string> StuffToBuy = new List<string>();
 
-        public GroceryLists()
+        public Lists()
         {
 
         }
 
-        public GroceryLists(string name)
+        public Lists(string name)
         {
 
         }
@@ -22,6 +22,12 @@ namespace TDDexamples
         {
             StuffToBuy.Add(stuff);
         }
+
+        public void RemoveStuffFromList(string stuff)
+        {
+            StuffToBuy.Remove(stuff);
+        }
+
 
         public List<string> ReturnMyList()
         {

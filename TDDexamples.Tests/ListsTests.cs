@@ -96,6 +96,19 @@ namespace TDDexamples.Tests
             Assert.DoesNotContain(4, sut.Fibonacci);
         }
 
+        [Fact]
+        public void Fibonacci_Do_The_Two_Lists_Have_The_Same_Items()
+        {
+            // Arrange
+            var expectedCollection = new List<int>() { 1, 1, 2, 3, 5, 8, 13 };
+            var sut = new Lists();
+
+            // Act
+
+            // Assert
+            Assert.Equal(expectedCollection, sut.Fibonacci);
+        }
+
     }
 
 }

@@ -59,6 +59,43 @@ namespace TDDexamples.Tests
             // Assert
             Assert.Equal(initialListCount, myList.Count);
         }
+
+        [Fact]
+        public void Fibonacci_List_Should_Not_Include_0()
+        {
+            // Arrange
+            var sut = new Lists();
+
+            // Act
+
+            // Assert
+            Assert.All(sut.Fibonacci, n => Assert.NotEqual(0, n));
+        }
+
+        [Fact]
+        public void Fibonacci_List_Includes_13()
+        {
+            // Arrange
+            var sut = new Lists();
+
+            // Act
+
+            // Assert
+            Assert.Contains(13, sut.Fibonacci);
+        }
+
+        [Fact]
+        public void Fibonacci_List_Does_Not_Include_4()
+        {
+            // Arrange
+            var sut = new Lists();
+
+            // Act
+
+            // Assert
+            Assert.DoesNotContain(4, sut.Fibonacci);
+        }
+
     }
 
 }

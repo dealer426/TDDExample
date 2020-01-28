@@ -36,5 +36,37 @@ namespace TDDexamples.Tests
             Assert.InRange(person.Age, 25, 60);
         }
 
+        [Fact]
+        public void GetOrdersByName_Not_Null()
+        {
+            //Arrange
+            var person = new RangeOfValues();
+
+            //Act
+
+            //Assert
+            //Looks at the otuput of the if statement in the method
+            Assert.Throws<ArgumentException>(()=> person.GetOrdersByName(null));
+
+        }
+
+        [Fact]
+        public void GetOrdersByName_Capture_Return_Message_When_Error_Is_Thrown()
+        {
+            //Arrange
+            var person = new RangeOfValues();
+
+            //Act
+
+            //Assert
+            //Looks at the otuput of the if statement in the method
+            //sets the exception to the var below
+            var exceptionDetails= Assert.Throws<ArgumentException>(() => person.GetOrdersByName(null));
+
+            //Does the exception Message return hello
+            Assert.Equal("Hello", exceptionDetails.Message);
+
+        }
+
     }
 }

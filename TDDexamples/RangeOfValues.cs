@@ -9,5 +9,14 @@ namespace TDDexamples
         public string Name => "Sam";
         public int Age => 52;
 
+        public int GetOrdersByName(string name)
+        {
+            if(string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentException("Hello");
+            }
+            return 100;
+        }
+
     }
 }
